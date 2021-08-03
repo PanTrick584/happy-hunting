@@ -1,0 +1,29 @@
+.title {
+    font-family: var(--font-serif);
+    font-size: 12rem;
+    text-transform: uppercase;
+    margin: auto 0;
+    color: var(--color-main-dark);
+    opacity: 0;
+    
+}
+
+.title-show {
+    animation-name: show-title;
+    animation-duration: 3.2s;
+}
+
+@keyframes show-title {
+    0% {
+        opacity: 0;
+        margin-right: -20%;
+    }
+    30% {
+        opacity: 1;
+        margin-right: 0;
+    }
+    100% {
+        opacity: 0;
+        margin-right: -7%;
+    }
+}

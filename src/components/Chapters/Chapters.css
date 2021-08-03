@@ -1,0 +1,55 @@
+.chapters {
+    position: fixed;
+    top: 50%;
+    right: 4rem;
+    font-size: 4rem;
+    transform: translate(0, -50%);
+    z-index: 10;
+}
+.chapters-menu {
+    list-style-type: none;
+}
+.chapters-menu li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+    font-family: var(--font-sans);
+    text-transform: uppercase;
+    transition: all .4s;
+    cursor: pointer;
+}
+
+.active {
+    color: var(--color-main-light);
+    font-size: 1.8rem;
+    opacity: 1;
+}
+.inactive {
+    color: var(--color-main-dark);
+    font-size: 1.6rem;
+    opacity: .9;
+}
+.inactive:hover {
+    color: var(--color-main-light);
+    opacity: 1;
+}
+.circle-active {
+    border-radius: 100px;
+    margin-left: 2rem;
+    height: 3rem;
+    width: 3rem;
+    border: 3px solid var(--color-main-light);
+    /* background-color: var(--color-main-light); */
+    background-color: transparent;
+    transition: all .4s;
+}
+.circle-inactive {
+    border-radius: 100px;
+    margin-left: 2rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    border: 3px solid var(--color-main-dark);
+    background-color: transparent;
+    transition: all .4s;
+}

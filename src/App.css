@@ -1,0 +1,22 @@
+* {
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cormorant', serif;
+}
+
+:root {
+    --color-grey: #303030;
+    --color-grey-dark: #121117;
+    --color-grey-light: #cfcbdc; 
+
+    --color-main: #C57F60;
+    --color-main-dark: #925235;
+    --color-main-light: #FFE1BE;
+    --color-white: #fff;
+
+    /* FONT */
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+}

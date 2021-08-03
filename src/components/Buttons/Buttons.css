@@ -1,0 +1,77 @@
+.btn-container {
+    display: flex;
+    align-items: center;
+    margin-top: 1.6rem;
+    margin-bottom: 3.6rem;
+    z-index: 10;
+}
+.btn {
+    border: 1px solid var(--color-grey-light);
+    border-radius: 10px;
+    outline: none;
+    cursor: pointer;
+    font-size: 2rem;
+    padding: 1rem;
+    margin-right: 1.6rem;
+    color: var(--color-grey-light);
+    background-color: transparent;
+}
+.buttons {
+    justify-self: end;
+    margin-bottom: 4rem;
+}
+.btn-item-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 2rem;
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.btn-item {
+    width: 4rem;
+    height: 4px;
+    background-color: var(--color-main-dark);
+    border-radius: 20px;
+    margin: 5px;
+    /* padding-top: 2rem; */
+}
+.btn-circle {
+    width: 2rem;
+    height: 2rem;
+    border: 2px solid var(--color-main-dark);
+    border-radius: 100px;
+    transition: all .4s;
+}
+.btn-item-box:hover .btn-circle {
+    border-color: var(--color-main-light);
+}
+.top-right {
+    /* transform: rotate(45deg); */
+    /* margin-left: -.8rem; */
+    padding: 2rem;
+}
+.top-left {
+    transform: rotate(135deg);
+    margin-right: -.8rem;
+}
+.bot-right {
+    transform: rotate(-45deg);
+    margin-top: 1.3rem;
+}
+.bot-left {
+    transform: rotate(-135deg);
+    /* margin-top: 1.3rem; */
+}
+/* NUMBERZ */
+.num {
+    font-size: 4rem;
+    color: var(--color-main-light);
+    padding: 0 .5rem;
+}
+.num-box {
+    display: flex;
+    flex-direction: row;
+}
