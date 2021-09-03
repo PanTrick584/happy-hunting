@@ -1,6 +1,28 @@
+.text-box {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .text {
-    font-size: 2.6rem;
-    color: var(--color-main);
-    width: 40%;
+    font-size: 3.2rem;
+    line-height: 1.4;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-main-light);
+    width: 50%;
     margin: 0 auto;
+    padding: 3rem;
+    z-index: 0;
+}
+@media screen and (max-width: 769px) {
+    .text {
+        font-size: 1.6rem;
+        margin: 0;
+        margin-right: auto;
+        text-align: left;
+    }
 }

@@ -1,7 +1,7 @@
 .btn-container {
     display: flex;
     align-items: center;
-    margin-top: 1.6rem;
+    margin-top: auto;
     margin-bottom: 3.6rem;
     z-index: 10;
 }
@@ -29,6 +29,11 @@
     background: transparent;
     border: none;
     outline: none;
+}
+@media screen and (max-width: 769px) {
+    .btn-item-box {
+        display: none;
+    }
 }
 .btn-item {
     width: 4rem;
@@ -74,4 +79,12 @@
 .num-box {
     display: flex;
     flex-direction: row;
+}
+@media screen and (max-width: 769px) {
+    .num-box {
+       position: absolute;
+       top: 70%;
+       left: 50%;
+       transform: translate(50%, 50%);
+    }
 }

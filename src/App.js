@@ -10,26 +10,17 @@ import './App.css'
 
 const initialStore = {
     sections: [],
-    sectionID: 1,
+    sectionID: 0,
     sectionAnimationLeft: false,
     sectionAnimationRight: false,
     // this is for screen resolution for other pictures
     size: 'pc',
-    // initial project state and picture coun
+    // initial project state and picture count
     start: false,
     showUI: false,
     count: 1,
     // SECTIONS POSITIONS
     positions: [],
-    // SECTIONS POSITIONS OLD
-    posStart: '',
-    posGrandpa: '',
-    posPhotograph: '',
-    posFish: '',
-    posOld: '',
-    posMuseum: '',
-    posAbout: '',
-    posFounded: '',
     // settingo for displaing header and proper title
     title: 'Boguś', 
     setHeader: 1,
@@ -39,8 +30,7 @@ const initialStore = {
     textCount: 0,
     textHide: false,
     // SCROLL
-    countScroll: 1,
-    windowPos: 0,
+    countScroll: 0,
   }
 
 const store = createStore( reducer, initialStore );

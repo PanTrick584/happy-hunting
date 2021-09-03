@@ -2,11 +2,11 @@ import React from 'react'
 
 import './Text.css'
 
-const Text = ( { text } ) => {
+const Text = ( { text, count } ) => {
     return (
-        <div>
+        <div className="text-box">
           <p className="text">
-              { text }
+              { text[ count - 1 ] }
           </p>  
         </div>
     )

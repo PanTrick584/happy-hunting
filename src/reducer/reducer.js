@@ -14,7 +14,9 @@ import {
     SET_SECTIONS,
     SET_SECTION_ID,
     SECTION_ANIMATION_LEFT,
-    SECTION_ANIMATION_RIGHT
+    SECTION_ANIMATION_RIGHT, 
+    SET_COUNT_SCROLL,
+    SET_COUNT_SCROLL_CHAPTERS
 } from '../action/actions'
 
 function reducer ( state, action ) {
@@ -117,6 +119,21 @@ function reducer ( state, action ) {
     if( action.type === HIDE_TEXT ) {
         return { ...state, textHide: !state.textHide }
     }
+    if( action.type === SET_COUNT_SCROLL ) {
+        let direction = action.payload.direction;
+        if( direction === 'down') {
+            return { ...state, countScroll: state.countScroll + 1 }
+        }
+        if( direction === 'up'  && state.countScroll !== 0) {
+            return { ...state, countScroll: state.countScroll - 1 }
+        }
+        return { ...state, textHide: !state.textHide }
+    }
+    if( action.type === SET_COUNT_SCROLL_CHAPTERS ) {
+        let id = action.payload.id;
+        return { ...state, countScroll: id }
+    }
+
     return state;
 }
 

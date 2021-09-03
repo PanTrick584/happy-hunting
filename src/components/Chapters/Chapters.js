@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
 import { connect } from 'react-redux'
-import { SET_HEADER } from '../../action/actions'
+import { SET_HEADER, SET_COUNT_SCROLL_CHAPTERS } from '../../action/actions'
 
 import './Chapters.css'
 
 const Chapters = ( {
     setTitle,
     sections,
-    sectionID
+    sectionID,
+    countScroll,
+    setCountScrollChapters
 } ) => {
 
     const [ activeItem, setActiveItem ] = useState(1);
@@ -36,7 +38,7 @@ const Chapters = ( {
             <ul className="chapters-menu">
                  {posSet ? sections.map( section => {
                     let { id, position, title } = section;
-                 return ( <li className={activeItem === id ? "active" : "inactive"} key={ id } onClick={ () => {scrollToSection( position ); setActiveItem( id ); setTitle( id ); } } >
+                 return ( <li className={activeItem === id ? "active" : "inactive"} key={ id } onClick={ () => {setCountScrollChapters( id - 1 ); setActiveItem( id ); setTitle( id ); } } >
                     {title} <div className={ activeItem === id ? "circle-active" : "circle-inactive" } ></div>
                     </li>
                   ) }) : null }
@@ -48,13 +50,15 @@ const Chapters = ( {
 const mapStateToProps = store => {
     return {
         sections: store.sections,
-        sectionID: store.sectionID
+        sectionID: store.sectionID,
+        countScroll: store.countScroll
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
         setTitle: ( id ) => dispatch( { type: SET_HEADER, payload: { id } } ),
+        setCountScrollChapters: ( id ) => dispatch( { type: SET_COUNT_SCROLL_CHAPTERS, payload: { id } } )
     }
 }
 

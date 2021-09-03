@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useLayoutEffect } from 'react'
 import { connect } from 'react-redux'
 import { 
     INCREASE_COUNT,
@@ -15,7 +15,7 @@ const ImageButtons = ( { length, id, count, increase, decrease, sectionAnimation
     
     const startSectionAnimationLeft = ( length, id ) => {
         setButtonOn( true )
-        sectionAnimationLeft( true )
+        sectionAnimationLeft( )
         setTimeout( () => {
             increase( length, id )
         }, 1000 )
@@ -25,7 +25,7 @@ const ImageButtons = ( { length, id, count, increase, decrease, sectionAnimation
     }
     const startSectionAnimationRight = ( id ) => {
         setButtonOn( true )
-        sectionAnimationRight( true )
+        sectionAnimationRight( )
         setTimeout( () => {
             decrease( id )
         }, 1000 )
